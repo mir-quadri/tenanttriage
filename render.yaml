@@ -1,0 +1,17 @@
+# Deploy on Render (free web service tier works -- the app is stdlib-only).
+# Render dashboard: New > Blueprint, point it at this repo, or create a Web
+# Service with Build Command empty/none and the Start Command below.
+services:
+  - type: web
+    name: tenanttriage
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python3 app.py
+    envVars:
+      - key: PORT
+        value: "8080"
+      # Optional: set SENTRY_DSN here to forward agent traces to Sentry.
+      # Optional: point OLLAMA_URL at a hosted/self-hosted Ollama if you want
+      # model-drafted replies in the hosted demo. Without it, the demo runs
+      # on the built-in templates -- fully functional, nothing mocked.
