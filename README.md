@@ -38,7 +38,7 @@ ollama pull gemma3:4b && ollama serve
 
 Your criteria: copy `criteria.example.json` to `criteria.json`, edit (rent, income multiple, eviction/credit criteria, pet policy), then run with `CRITERIA=criteria.json python3 app.py`.
 
-Deploy: `render.yaml` is included for a one-click Render web service. The hosted demo runs on templates unless you point `OLLAMA_URL` at a model host — no functionality is mocked.
+Deploy: `render.yaml` is included for a one-click Render web service. A hosted deploy runs on templates unless you point `OLLAMA_URL` at a model host — no functionality is mocked.
 
 ## Why open-source AI is the business model
 
@@ -53,7 +53,6 @@ The builder is an independent landlord with a live vacancy (2-bed, $800/mo, Tole
 ## Prize categories entered
 
 - **Best Use of Gemma** — Gemma via Ollama is the responder agent's model.
-- **Best Use of Render** — deployed from the included `render.yaml`.
 - **Best Use of Sentry Agent Tracing** — per-agent spans on every run, Sentry forwarding via `SENTRY_DSN`.
 - **Best Use of Entire** — build/agent sessions in `docs/agent-sessions.md`.
 
